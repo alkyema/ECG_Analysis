@@ -11,10 +11,10 @@ try:
             tracings_dataset = hdf_file['tracings']
             
             # Extract the first tracing and remove the first and last 582 rows
-            first_tracing = tracings_dataset[1][582:-582]  # First tracing with rows removed
+            first_tracing = tracings_dataset[0][582:-582]  # First tracing with rows removed
 
             # Define the CSV file name
-            csv_file_name = "Second_Tracing.csv"
+            csv_file_name = "First_Tracing.csv"
 
             # Write the first tracing to a CSV file
             with open(csv_file_name, mode='w', newline='') as csv_file:
